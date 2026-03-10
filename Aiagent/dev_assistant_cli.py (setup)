@@ -1,0 +1,10 @@
+# Create a setup file for the CLI
+setup(
+    name="dev_assistant_cli",
+    version="1.0",
+    packages=["dev_assistant_cli"],
+    install_requires=["click"],
+    author="Your Name",
+    author_email="your@email.com",
+    description="CLI for the dev assistant",
+)

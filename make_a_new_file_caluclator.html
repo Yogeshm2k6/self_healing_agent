@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <title>Calculator</title>
+</head>
+
+<body>
+  <h1>Calculator</h1>
+  <form>
+    <input type="number" id="num1" value="10">
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" value="5">
+    <button type="button" onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+  </form>
+
+  <script>
+    function calculate() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var operator = document.getElementById("operator").value;
+      var result;
+
+      switch (operator) {
+        case "+":
+          result = num1 + num2;
+          break;
+        case "-":
+          result = num1 - num2;
+        case "*":
+          result = num1 * num2;
+          break;
+        case "/":
+          if (num2 != 0) {
+            result = num1 / num2;
+          } else {
+            result = "Error: Division by zero";
+          }
+          break;
+      }
+
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }

@@ -1,0 +1,12 @@
+import unittest
+
+class TestApp(unittest.TestCase):
+
+    def test_example(self):
+        self.assertEqual(2 + 2, 4)
+
+    def test_example2(self):
+        self.assertEqual(5 * 5, 25)
+
+if __name__ == '__main__':
+    unittest.main()
