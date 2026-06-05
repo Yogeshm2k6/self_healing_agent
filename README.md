@@ -1,5 +1,3 @@
-Here's a professional, GitHub-ready README for your project:
-
 # 🤖 Self-Healing Developer Agent
 
 An AI-powered developer assistant that automatically detects, analyzes, and fixes development errors using Large Language Models.
@@ -230,7 +228,7 @@ MAX_RETRIES=3
 
 ## Step 4: Get a Free Groq API Key
 
-1. Visit [https://console.groq.com](https://console.groq.com)
+1. Visit https://console.groq.com
 2. Create an account
 3. Generate an API Key
 4. Paste it into `.env`
@@ -413,113 +411,6 @@ Example:
 [INFO] Fix applied
 [INFO] Verification passed
 ```
-## 🎬 Example Output
-
-
-
-
-
-╔═══════════════════════════════════════════╗
-
-║     🤖  Self-Healing Developer Agent       ║
-
-║   Observe  →  Reason  →  Act  →  Verify   ║
-
-╚═══════════════════════════════════════════╝
-
-
-
-━━━━━━━━━━━━━━━━━━ Self-Healing Agent ━━━━━━━━━━━━━━━━━━
-
-▶  Running:  python app.py
-
-
-
-  Status : FAILED  |  Exit : 1  |  Time : 0.312s
-
-╭─────────────────── stderr ──────────────────────╮
-
-│ Traceback (most recent call last):              │
-
-│   File "app.py", line 1, in <module>            │
-
-│     import pandas as pd                         │
-
-│ ModuleNotFoundError: No module named 'pandas'   │
-
-╰─────────────────────────────────────────────────╯
-
-
-
-━━━━━━━━━━━━━━━━━━ Attempt 1/3 ━━━━━━━━━━━━━━━━━━
-
-
-
-╭──────────── Error Detected ─────────────────────╮
-
-│ Error Type : ModuleNotFoundError                │
-
-│ Message    : ModuleNotFoundError: No module ... │
-
-│ Module     : pandas                             │
-
-╰─────────────────────────────────────────────────╯
-
-
-
-Consulting the LLM…
-
-
-
-╭──────────── Suggested Fix ──────────────────────╮
-
-│ Fix Command : pip install pandas                │
-
-│ Confidence  : high                              │
-
-│ Source      : LLM 🧠                           │
-
-│                                                 │
-
-│ The 'pandas' package is not installed...        │
-
-╰─────────────────────────────────────────────────╯
-
-
-
-Apply this fix? [Y/n]: Y
-
-
-
-Applying fix: pip install pandas
-
-Fix applied successfully.
-
-
-
-▶  Re-running: python app.py
-
-
-
-  Status : SUCCESS  |  Exit : 0  |  Time : 1.105s
-
-
-
-✓ Command succeeded after 1 fix attempt(s)!
-
-
-
-╭──────────── Session Summary ────────────────────╮
-
-│ Command  : python app.py                        │
-
-│ Status   : ✓  FIXED & PASSING                  │
-
-│ Attempts : 1                                    │
-
-│ Fix Used : pip install pandas                   │
-
-╰─────────────────────────────────────────────────╯
 
 ---
 
@@ -616,4 +507,98 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 *Transform your development workflow with autonomous debugging and intelligent self-healing.*
 
-This version is polished for GitHub, recruiters, hackathons, open-source releases, and portfolio projects.
+## 🎬 Example Output
+
+```text
+╔══════════════════════════════════════════════════════╗
+║           🤖 Self-Healing Developer Agent           ║
+║         Observe → Reason → Act → Verify            ║
+╚══════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+▶ Running Command
+
+$ python app.py
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ Command Failed
+
+Exit Code : 1
+Duration  : 0.34s
+
+Error Detected:
+
+Traceback (most recent call last):
+  File "app.py", line 1, in <module>
+    import pandas as pd
+
+ModuleNotFoundError: No module named 'pandas'
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 Analyzing Error...
+
+✔ Error Type : ModuleNotFoundError
+✔ Missing Module : pandas
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧠 Consulting Groq LLM...
+
+Suggested Fix:
+
+Command:
+pip install pandas
+
+Confidence:
+98%
+
+Explanation:
+The application requires the pandas package,
+but it is not installed in the current Python
+environment.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Apply Fix? [Y/n]: Y
+
+Applying Fix...
+
+$ pip install pandas
+
+✔ Installation completed successfully
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔄 Verifying Fix...
+
+Re-running:
+
+$ python app.py
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ SUCCESS
+
+Exit Code : 0
+Duration  : 1.02s
+
+Command executed successfully.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 Session Summary
+
+Command      : python app.py
+Status       : FIXED & PASSING
+Attempts     : 1
+Fix Applied  : pip install pandas
+Source       : Groq LLM
+Memory Saved : Yes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 Issue Resolved Successfully!
+```
