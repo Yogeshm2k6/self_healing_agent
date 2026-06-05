@@ -36,7 +36,7 @@ The Self-Healing Developer Agent implements the **Observe → Reason → Act** a
 
 ## 🏗️ Architecture
 
-```
+
 self-healing-agent/
 ├── main.py            # CLI entry point
 ├── app_ui.py          # Streamlit dashboard (bonus)
@@ -79,9 +79,9 @@ User → main.py → SelfHealingAgent.run()
                   run_command()  ← verify
                          │
                   [success?] → Done ✓ / retry
-```
 
----
+
+
 
 ## ⚙️ Installation
 
@@ -172,7 +172,7 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ## 🎬 Example Output
 
-```
+
 ╔═══════════════════════════════════════════╗
 ║     🤖  Self-Healing Developer Agent       ║
 ║   Observe  →  Reason  →  Act  →  Verify   ║
@@ -224,7 +224,7 @@ Fix applied successfully.
 │ Attempts : 1                                    │
 │ Fix Used : pip install pandas                   │
 ╰─────────────────────────────────────────────────╯
-```
+
 
 ---
 
@@ -260,5 +260,6 @@ Fix applied successfully.
 ## 📄 License
 
 MIT — free to use, modify, and distribute.
-#   s e l f _ h e a l i n g _ a g e n t  
+#   s e l f _ h e a l i n g _ a g e n t 
+ 
  
